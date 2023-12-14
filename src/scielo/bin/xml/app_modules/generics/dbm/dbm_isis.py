@@ -157,8 +157,11 @@ class IDFile(object):
                     content = {}
                     for subf in subfields:
                         if subf.startswith('^'):
-                            c = subf[1]
-                            v = subf[2:]
+                            if len(subf) > 2:
+                                c = subf[1]
+                                v = subf[2:]
+                            else:
+                                print(subfields)
                         else:
                             if len(subfields) == 1:
                                 c = u''
