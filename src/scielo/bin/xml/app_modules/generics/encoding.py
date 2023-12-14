@@ -56,32 +56,18 @@ def encode(content, encoding='utf-8', error_handler=None):
     """
     if content is not None:
         if is_encodable(content):
-            if error_handler in ['xmlcharrefreplace', 'replace', 'ignore']:
+            options = ('xmlcharrefreplace', 'replace', 'ignore')
+            if error_handler in options:
+                options = (error_handler, )
+
+            for error_handler in options:
                 try:
                     content = content.encode(encoding, error_handler)
                 except Exception as e:
-                    report_exception('encode() 1', e)
-            else:
-                try:
-                    content = content.encode(encoding)
-                except Exception as e:
-                    try:
-                        content = content.encode(encoding, 'xmlcharrefreplace')
-                        report_exception(
-                            'encode(): xmlcharrefreplace',
-                            e,
-                            content)
-                    except Exception as e:
-                        try:
-                            content = content.encode(encoding, 'replace')
-                            report_exception('encode(): replace', e, content)
-                        except Exception as e:
-                            try:
-                                content = content.encode(encoding, 'ignore')
-                                report_exception('encode(): ignore', e, content)
-                            except Exception as e:
-                                report_exception('encode() n', e, content)
-
+                    if error_handler is options[-1]:
+                        raise e
+                else:
+                    break
     return content
 
 
@@ -121,3 +107,4 @@ def display_message(msg):
 
 def fix_args(args):
     return [decode(arg.replace('\\', '/'), SYS_DEFAULT_ENCODING) for arg in args]
+
