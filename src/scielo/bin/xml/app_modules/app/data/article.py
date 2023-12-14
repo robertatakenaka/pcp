@@ -449,6 +449,12 @@ class ArticleXML(object):
                     self.sub_articles.append(s)
             self.responses = self.tree.findall('./response')
 
+    @property
+    def is_provisional(self):
+        if self.body is not None:
+            return self.body.attrib.get('specific-use') == "provisional"
+        return False
+
     def get_articlemeta_node_date(self, xpath):
         if self.article_meta is not None:
             node = self.article_meta.find(xpath)
@@ -831,7 +837,9 @@ class ArticleXML(object):
             for node in self.article_meta.findall('kwd-group'):
                 language = xml_utils.element_lang(node)
                 for kw in node.findall('kwd'):
-                    k.append({'l': language, 'k': xml_utils.node_text(kw)})
+                    kw_text = xml_utils.node_text(kw)
+                    kw_text = kw_text.replace("<italic>", "").replace("</italic>", "")
+                    k.append({'l': language, 'k': kw_text})
         return k
 
     @property
@@ -841,7 +849,9 @@ class ArticleXML(object):
             for node in subart.findall('.//kwd-group'):
                 language = xml_utils.element_lang(node)
                 for kw in node.findall('kwd'):
-                    k.append({'l': language, 'k': xml_utils.node_text(kw)})
+                    kw_text = xml_utils.node_text(kw)
+                    kw_text = kw_text.replace("<italic>", "").replace("</italic>", "")
+                    k.append({'l': language, 'k': kw_text})
         return k
 
     @property
@@ -854,8 +864,8 @@ class ArticleXML(object):
         for item in self.article_contrib_items:
             if isinstance(item, PersonAuthor):
                 items.append(item)
-        for subartid, subarticle_contrib_items in self.subarticles_contrib_items.items():
-            items.extend([subarticlecontrib for subarticlecontrib in subarticle_contrib_items if isinstance(subarticlecontrib, PersonAuthor)])
+        # for subartid, subarticle_contrib_items in self.subarticles_contrib_items.items():
+        #     items.extend([subarticlecontrib for subarticlecontrib in subarticle_contrib_items if isinstance(subarticlecontrib, PersonAuthor)])
         return items
 
     @property
@@ -1762,7 +1772,7 @@ class Article(ArticleXML):
 
     @property
     def textual_titles(self):
-        return ' | '.join([self.article_titles.get(k) for k in sorted(self.article_titles.keys())])
+        return ' | '.join([self.article_titles.get(k) or '' for k in sorted(self.article_titles.keys())])
 
     @property
     def textual_contrib_surnames(self):
