@@ -36,7 +36,7 @@ class SPSXMLContent(xml_utils.XMLContent):
             self.remove_xmllang_from_element('source')
             self.content = self.content.replace('> :', '>: ')
             self.normalize_references()
-            for tag in ['article-title', 'trans-title', 'kwd', 'source']:
+            for tag in ['article-title', 'trans-title', 'source']:
                 self.remove_styles_from_tagged_content(tag)
             self.content = self.content.replace('<institution content-type="normalized"/>', '')
             self.content = self.content.replace('<institution content-type="normalized"></institution>', '')
