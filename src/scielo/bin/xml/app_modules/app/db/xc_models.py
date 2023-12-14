@@ -182,6 +182,8 @@ class ArticleRecords(object):
         return self._metadata
 
     def add_article_data(self):
+        if self.article.is_provisional:
+            self._metadata['742'] = 'provisional'
         if self.article.dtd_version is not None:
             self._metadata['120'] = 'XML_' + self.article.dtd_version
         self._metadata['71'] = attributes.normalize_doctopic(self.article.article_type)
@@ -210,10 +212,10 @@ class ArticleRecords(object):
                 _t = 'pr'
             elif _t == 'in-this-issue':
                 _t = 'article'
-            if _t == 'commentary':
-                _t = 'pr'
-            elif _t == 'article-reference':
-                _t = 'article'
+            # if _t == 'commentary':
+            #     _t = 'pr'
+            # elif _t == 'article-reference':
+            #     _t = 'article'
             new['t'] = _t
             new['n'] = item.get('ext-link-type')
             self._metadata['241'].append(new)
@@ -236,7 +238,7 @@ class ArticleRecords(object):
             new['s'] = surname_and_suffix
             new['p'] = item.prefix
             new['r'] = attributes.normalize_role(item.role)
-            new['1'] = ' '.join(item.xref)
+            new['1'] = ' '.join([str(_xref) for _xref in item.xref])
             new['k'] = item.contrib_id.get('orcid')
             new['l'] = item.contrib_id.get('lattes')
             self._metadata['10'].append(new)
@@ -257,7 +259,8 @@ class ArticleRecords(object):
         self._metadata['237'] = self.article.doi
         self._metadata['337'] = [
             {'l': lang, 'd': doi}
-            for doi, lang in self.article.doi_and_lang]
+            for lang, doi in self.article.doi_and_lang
+            if doi and lang]
 
         self._metadata['121'] = self.article.order
         self._metadata['881'] = self.article.previous_pid
@@ -566,9 +569,7 @@ class IssueModels(object):
         number = record.get('32')
         number_suppl = record.get('132')
         compl = record.get('41')
-
         i = Issue(acron, volume, number, dateiso, volume_suppl, number_suppl, compl)
-
         i.issn_id = record.get('35')
         i.journal_title = record.get('130')
         i.journal_id_nlm_ta = record.get('421')
@@ -636,7 +637,8 @@ class IssueModels(object):
             validations.append(('publisher', article.publisher_name, self.issue.publisher_name, validation_status.STATUS_ERROR))
             for label, article_data, issue_data, status in validations:
                 if utils.how_similar(article_data, issue_data) < 0.8:
-                    if article_data not in issue_data:
+                    #print((article_data, issue_data))
+                    if (article_data or '') not in issue_data:
                         _msg = _('{label}: "{value1}" ({label1}) and "{value2}" ({label2}) do not match. ').format(label=label, value1=article_data, label1=_('article'), value2=issue_data, label2=_('issue'))
                         results.append((label, status, _msg))
 
@@ -771,6 +773,7 @@ class ArticlesManager(object):
     def get_valid_aop(self, article):
         valid_aop, aop_status, messages = self.aop_db_manager.get_validated_aop(article)
         self.xc_messages.extend(messages)
+
         if valid_aop is not None:
             article.registered_aop_pid = valid_aop.pid
         return (aop_status, valid_aop)
@@ -959,8 +962,9 @@ class BaseManager(object):
             return new
 
         if '!v706!f' in content:
-            content = content.replace('<italic>', '<em>')
-            content = content.replace('</italic>', '</em>')
+            if content.count('<italic>') == content.count('</italic>'):
+                content = content.replace('<italic>', '<em>')
+                content = content.replace('</italic>', '</em>')
             content = content.replace('<bold>', '<strong>')
             content = content.replace('</bold>', '</strong>')
         elif '!v706!c' in content or '!v706!h' in content:
