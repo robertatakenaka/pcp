@@ -277,11 +277,79 @@ class ArticleContentValidation(object):
         """
         results = attributes.validate_article_type_and_section(self.article.article_type, self.article.toc_section, len(self.article.abstracts) > 0)
         msg = _('The documents used to generate the bibliometric indicators must have:\na) @article-type ({}); b) contributors and their affiliations; c) own title, not similar to the table of contents title; d) citations; e) and references. ').format(_(', ').join(attributes.INDEXABLE))
+        level = validation_status.STATUS_FATAL_ERROR
+        if self.config.BLOCK_DISAGREEMENT_WITH_COLLECTION_CRITERIA:
+            level = validation_status.STATUS_BLOCKING_ERROR
+
+        errors = []
+        warnings = []
+        if self.article.article_type in attributes.INDEXABLE:
+            if self.article.article_type not in attributes.INDEXABLE_BUT_EXCEPTION \
+                    and not self.article.is_provisional:
+                check = attributes.INDEXABLE_EXCEPTIONS.get(
+                    self.article.article_type,
+                    ['contrib', 'aff', 'xref (bibr)', 'ref']
+                )
+                items = [
+                    ('contrib', len(self.article.article_contrib_items)),
+                    ('aff', len(self.article.article_affiliations)),
+                    ('xref (bibr)', len(self.article.bibr_xref_nodes)),
+                    ('ref', len(self.article.references_xml))]
+                invalid = [label
+                           for label, qtd in items
+                           if label in check and qtd == 0]
+                warning = [label
+                           for label, qtd in items
+                           if label not in check and qtd == 0]
+                if len(warning) > 0:
+                    warnings.append(
+                        _('@article-type="{}" expects: {}. ').format(
+                            self.article.article_type,
+                            ' ; '.join(warning)))
+                if len(invalid) > 0:
+                    errors.append(
+                        _('@article-type="{}" requires: {}. ').format(
+                            self.article.article_type,
+                            ' ; '.join(invalid)))
+                titles = [t.title for t in self.article.titles]
+                _titles = ' / '.join([u'"{}"'.format(t) for t in titles])
+                if utils.is_similar(self.article.toc_section, titles):
+                    warnings.append(
+                        _(u'{} must not be similar to the table of contents section "{}" '.format(
+                            _titles, self.article.toc_section)))
+        else:
+            errors.append(
+                _('@article-type="{}" is not used to generate bibliometric indicators').format(self.article.article_type))
+        if len(errors) > 0:
+            results.append(('@article-type', level, msg))
+            results.append(
+                (
+                    '@article-type',
+                    level,
+                    _('This document will be rejected according to SciELO Collection\'s criteria. ') +
+                    _('Check the criteria of the corresponding SciELO Collection. ')
+                ))
+            results.append(('@article-type', level, ''.join(errors)))
+        if len(warnings) > 0:
+            results.append(('@article-type', validation_status.STATUS_FATAL_ERROR, ''.join(warnings)))
+        return results
+
+    @property
+    def _old_article_type(self):
+        """
+        com autoria e afiliação institucional dos autores,
+        título próprio diferente do título da seção,
+        citações,
+        e referências bibliográficas
+        """
+        results = attributes.validate_article_type_and_section(self.article.article_type, self.article.toc_section, len(self.article.abstracts) > 0)
+        msg = _('The documents used to generate the bibliometric indicators must have:\na) @article-type ({}); b) contributors and their affiliations; c) own title, not similar to the table of contents title; d) citations; e) and references. ').format(_(', ').join(attributes.INDEXABLE))
         level = validation_status.STATUS_DISAGREED_WITH_COLLECTION_CRITERIA
 
         errors = []
         if self.article.article_type in attributes.INDEXABLE:
-            if self.article.article_type not in attributes.INDEXABLE_BUT_EXCEPTION:
+            if self.article.article_type not in attributes.INDEXABLE_BUT_EXCEPTION \
+                    and not self.article.is_provisional:
                 check = attributes.INDEXABLE_EXCEPTIONS.get(
                     self.article.article_type,
                     ['contrib', 'aff', 'xref (bibr)', 'ref']
@@ -865,6 +933,8 @@ class ArticleContentValidation(object):
         r.append(self._total(self.article.total_of_references, self.article.ref_count, _('total of references'), 'ref-count'))
         if self.article.article_type in attributes.REFS_REQUIRED_FOR_DOCTOPIC:
             if self.article.total_of_references == 0:
+                if self.article.is_provisional:
+                    return r
                 r.append((_('total of references'), validation_status.STATUS_FATAL_ERROR, _('{requirer} requires {required}. ').format(requirer=self.article.article_type, required=_('references'))))
         return r
 
@@ -1119,11 +1189,12 @@ class ArticleContentValidation(object):
     def article_date_types(self):
         r = []
         dt = []
+        
         for fmt, date_type, pub_type, xml in self.article.raw_pubdate_items:
             if date_type in dt or pub_type in dt:
                 r.append(
                     ('pub-date',
-                     validation_status.STATUS_BLOCKING_ERROR,
+                     validation_status.STATUS_FATAL_ERROR,
                      _('"pub-date" ({}) is duplicated. ').format(
                         date_type or pub_type),
                      xml
@@ -1133,7 +1204,7 @@ class ArticleContentValidation(object):
                 dt.append(date_type)
             if pub_type is not None:
                 dt.append(pub_type)
-
+        
         if self.article.sps_version_number > 1.8:
             for fmt, date_type, pub_type, xml in self.article.raw_pubdate_items:
                 if fmt is None:
@@ -1607,7 +1678,7 @@ class HRefValidation(object):
         name, ext = os.path.splitext(self.hrefitem.src)
         if self.hrefitem.src not in self.pkgfiles.related_files:
             if name not in self.pkgfiles.related_files_by_name.keys():
-                result.append((validation_status.STATUS_FATAL_ERROR, _('Not found {label} in the {item}. ').format(label=self.hrefitem.src, item=_('package'))))
+                result.append((validation_status.STATUS_BLOCKING_ERROR, _('Not found {label} in the {item}. ').format(label=self.hrefitem.src, item=_('package'))))
         if '.' not in self.hrefitem.src:
             result.append((validation_status.STATUS_WARNING, _('missing extension of ') + self.hrefitem.src + '.'))
         return result
