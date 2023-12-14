@@ -1,0 +1,593 @@
+Only in xml: __init__.py
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app: article_utils.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/config: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/config: app_caller.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/config: app_texts.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/config: config.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: aff_normalization.pyc
+diff -rup xml/app_modules/app/data/article.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data/article.py
+--- xml/app_modules/app/data/article.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data/article.py	2023-06-29 12:01:03.000000000 -0300
+@@ -449,6 +449,12 @@ class ArticleXML(object):
+                     self.sub_articles.append(s)
+             self.responses = self.tree.findall('./response')
+ 
++    @property
++    def is_provisional(self):
++        if self.body is not None:
++            return self.body.attrib.get('specific-use') == "provisional"
++        return False
++
+     def get_articlemeta_node_date(self, xpath):
+         if self.article_meta is not None:
+             node = self.article_meta.find(xpath)
+@@ -831,7 +837,9 @@ class ArticleXML(object):
+             for node in self.article_meta.findall('kwd-group'):
+                 language = xml_utils.element_lang(node)
+                 for kw in node.findall('kwd'):
+-                    k.append({'l': language, 'k': xml_utils.node_text(kw)})
++                    kw_text = xml_utils.node_text(kw)
++                    kw_text = kw_text.replace("<italic>", "").replace("</italic>", "")
++                    k.append({'l': language, 'k': kw_text})
+         return k
+ 
+     @property
+@@ -841,7 +849,9 @@ class ArticleXML(object):
+             for node in subart.findall('.//kwd-group'):
+                 language = xml_utils.element_lang(node)
+                 for kw in node.findall('kwd'):
+-                    k.append({'l': language, 'k': xml_utils.node_text(kw)})
++                    kw_text = xml_utils.node_text(kw)
++                    kw_text = kw_text.replace("<italic>", "").replace("</italic>", "")
++                    k.append({'l': language, 'k': kw_text})
+         return k
+ 
+     @property
+@@ -854,8 +864,8 @@ class ArticleXML(object):
+         for item in self.article_contrib_items:
+             if isinstance(item, PersonAuthor):
+                 items.append(item)
+-        for subartid, subarticle_contrib_items in self.subarticles_contrib_items.items():
+-            items.extend([subarticlecontrib for subarticlecontrib in subarticle_contrib_items if isinstance(subarticlecontrib, PersonAuthor)])
++        # for subartid, subarticle_contrib_items in self.subarticles_contrib_items.items():
++        #     items.extend([subarticlecontrib for subarticlecontrib in subarticle_contrib_items if isinstance(subarticlecontrib, PersonAuthor)])
+         return items
+ 
+     @property
+@@ -1762,7 +1772,7 @@ class Article(ArticleXML):
+ 
+     @property
+     def textual_titles(self):
+-        return ' | '.join([self.article_titles.get(k) for k in sorted(self.article_titles.keys())])
++        return ' | '.join([self.article_titles.get(k) or '' for k in sorted(self.article_titles.keys())])
+ 
+     @property
+     def textual_contrib_surnames(self):
+@@ -1834,6 +1844,15 @@ class Article(ArticleXML):
+             return r
+         d = None
+         if not self.is_ahead:
++            print("----")
++            print("DOI")
++            print(type(self.article_id))
++            # print('%s' % self.article_id)
++            print("self.previous_article_pid")
++            print(self.previous_article_pid)
++            print("self.registered_aop_pid")
++            print(self.registered_aop_pid)
++            print("----")
+             if self.previous_article_pid is not None:
+                 if is_valid(self.previous_article_pid):
+                     d = self.previous_article_pid
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: article.pyc
+diff -rup xml/app_modules/app/data/attributes.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data/attributes.py
+--- xml/app_modules/app/data/attributes.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data/attributes.py	2019-05-24 08:20:23.000000000 -0300
+@@ -102,6 +102,7 @@ INDEXABLE = [
+ 
+ INDEXABLE_EXCEPTIONS = {
+     'editorial': ['aff', 'contrib'],
++    'other': [],
+ }
+ 
+ INDEXABLE_BUT_EXCEPTION = [
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: attributes.pyc
+diff -rup xml/app_modules/app/data/merged.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data/merged.py
+--- xml/app_modules/app/data/merged.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data/merged.py	2021-04-16 08:38:56.000000000 -0300
+@@ -33,7 +33,8 @@ class MergedArticlesData(object):
+ 
+     def __init__(self, merged_articles, is_db_generation):
+         self.merged_articles = merged_articles
+-        self.ERROR_LEVEL_FOR_UNIQUE_VALUES = {'order': validation_status.STATUS_BLOCKING_ERROR, 'doi': validation_status.STATUS_BLOCKING_ERROR, 'elocation id': validation_status.STATUS_BLOCKING_ERROR, 'fpage-lpage-seq-elocation-id': validation_status.STATUS_ERROR}
++        self.ERROR_LEVEL_FOR_UNIQUE_VALUES = {'order': validation_status.STATUS_BLOCKING_ERROR, 'doi': validation_status.STATUS_FATAL_ERROR, 'elocation id': validation_status.STATUS_BLOCKING_ERROR, 'fpage-lpage-seq-elocation-id': validation_status.STATUS_ERROR}
++        #self.ERROR_LEVEL_FOR_UNIQUE_VALUES = {'order': validation_status.STATUS_BLOCKING_ERROR, 'doi': validation_status.STATUS_BLOCKING_ERROR, 'elocation id': validation_status.STATUS_BLOCKING_ERROR, 'fpage-lpage-seq-elocation-id': validation_status.STATUS_ERROR}
+         if not is_db_generation:
+             self.ERROR_LEVEL_FOR_UNIQUE_VALUES['order'] = validation_status.STATUS_WARNING
+         self.IGNORE_NONE = ['journal-id (nlm-ta)', 'e-ISSN', 'print ISSN', ]
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: merged.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: package.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/data: workarea.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: registered.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: serial.pyc
+diff -rup xml/app_modules/app/db/xc_models.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db/xc_models.py
+--- xml/app_modules/app/db/xc_models.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db/xc_models.py	2023-12-12 16:17:41.000000000 -0300
+@@ -182,6 +182,8 @@ class ArticleRecords(object):
+         return self._metadata
+ 
+     def add_article_data(self):
++        if self.article.is_provisional:
++            self._metadata['742'] = 'provisional'
+         if self.article.dtd_version is not None:
+             self._metadata['120'] = 'XML_' + self.article.dtd_version
+         self._metadata['71'] = attributes.normalize_doctopic(self.article.article_type)
+@@ -210,10 +212,10 @@ class ArticleRecords(object):
+                 _t = 'pr'
+             elif _t == 'in-this-issue':
+                 _t = 'article'
+-            if _t == 'commentary':
+-                _t = 'pr'
+-            elif _t == 'article-reference':
+-                _t = 'article'
++            # if _t == 'commentary':
++            #     _t = 'pr'
++            # elif _t == 'article-reference':
++            #     _t = 'article'
+             new['t'] = _t
+             new['n'] = item.get('ext-link-type')
+             self._metadata['241'].append(new)
+@@ -236,7 +238,7 @@ class ArticleRecords(object):
+             new['s'] = surname_and_suffix
+             new['p'] = item.prefix
+             new['r'] = attributes.normalize_role(item.role)
+-            new['1'] = ' '.join(item.xref)
++            new['1'] = ' '.join([str(_xref) for _xref in item.xref])
+             new['k'] = item.contrib_id.get('orcid')
+             new['l'] = item.contrib_id.get('lattes')
+             self._metadata['10'].append(new)
+@@ -257,7 +259,8 @@ class ArticleRecords(object):
+         self._metadata['237'] = self.article.doi
+         self._metadata['337'] = [
+             {'l': lang, 'd': doi}
+-            for doi, lang in self.article.doi_and_lang]
++            for lang, doi in self.article.doi_and_lang
++            if doi and lang]
+ 
+         self._metadata['121'] = self.article.order
+         self._metadata['881'] = self.article.previous_pid
+@@ -566,9 +569,7 @@ class IssueModels(object):
+         number = record.get('32')
+         number_suppl = record.get('132')
+         compl = record.get('41')
+-
+         i = Issue(acron, volume, number, dateiso, volume_suppl, number_suppl, compl)
+-
+         i.issn_id = record.get('35')
+         i.journal_title = record.get('130')
+         i.journal_id_nlm_ta = record.get('421')
+@@ -636,7 +637,9 @@ class IssueModels(object):
+             validations.append(('publisher', article.publisher_name, self.issue.publisher_name, validation_status.STATUS_ERROR))
+             for label, article_data, issue_data, status in validations:
+                 if utils.how_similar(article_data, issue_data) < 0.8:
+-                    if article_data not in issue_data:
++                    print(label, article_data, issue_data)
++                    #print((article_data, issue_data))
++                    if (article_data or '') not in issue_data:
+                         _msg = _('{label}: "{value1}" ({label1}) and "{value2}" ({label2}) do not match. ').format(label=label, value1=article_data, label1=_('article'), value2=issue_data, label2=_('issue'))
+                         results.append((label, status, _msg))
+ 
+@@ -771,8 +774,18 @@ class ArticlesManager(object):
+     def get_valid_aop(self, article):
+         valid_aop, aop_status, messages = self.aop_db_manager.get_validated_aop(article)
+         self.xc_messages.extend(messages)
++        
++        print("*****")
++        print("getvalidaaop")
++        print(type(article.article_id))
++        print(article.xml_name)
++        # print(article.article_id)
++        print("valid_aop")
+         if valid_aop is not None:
+             article.registered_aop_pid = valid_aop.pid
++            print("registered_aop_pid")
++            print(article.registered_aop_pid)
++            print("****")
+         return (aop_status, valid_aop)
+ 
+     def exclude_aop(self, valid_aop):
+@@ -959,8 +972,9 @@ class BaseManager(object):
+             return new
+ 
+         if '!v706!f' in content:
+-            content = content.replace('<italic>', '<em>')
+-            content = content.replace('</italic>', '</em>')
++            if content.count('<italic>') == content.count('</italic>'):
++                content = content.replace('<italic>', '<em>')
++                content = content.replace('</italic>', '</em>')
+             content = content.replace('<bold>', '<strong>')
+             content = content.replace('</bold>', '</strong>')
+         elif '!v706!c' in content or '!v706!h' in content:
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: xc_models.py.2021-04-08
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: xc_models.py.2023-12-12.tgz
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: xc_models.py.bkp-2023-06-01
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/db: xc_models.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors: pkg_processors.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors: pmc_pkgmaker.pyc
+diff -rup xml/app_modules/app/pkg_processors/sps_pkgmaker.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors/sps_pkgmaker.py
+--- xml/app_modules/app/pkg_processors/sps_pkgmaker.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors/sps_pkgmaker.py	2020-06-18 08:56:11.000000000 -0300
+@@ -36,7 +36,7 @@ class SPSXMLContent(xml_utils.XMLContent
+             self.remove_xmllang_from_element('source')
+             self.content = self.content.replace('> :', '>: ')
+             self.normalize_references()
+-            for tag in ['article-title', 'trans-title', 'kwd', 'source']:
++            for tag in ['article-title', 'trans-title', 'source']:
+                 self.remove_styles_from_tagged_content(tag)
+             self.content = self.content.replace('<institution content-type="normalized"/>', '')
+             self.content = self.content.replace('<institution content-type="normalized"></institution>', '')
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors: sps_pkgmaker.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/pkg_processors: xml_versions.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/server: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/server: filestransfer.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/server: mailer.pyc
+diff -rup xml/app_modules/app/server/xc_gerapadrao.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/server/xc_gerapadrao.py
+--- xml/app_modules/app/server/xc_gerapadrao.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/server/xc_gerapadrao.py	2019-03-25 14:51:35.000000000 -0300
+@@ -125,3 +125,4 @@ def gerapadrao(collection_acron, config,
+ 
+ def gerapadrao_command(proc_path, gerapadrao_status_filename):
+     return 'cd ' + proc_path + ';./GeraPadrao.bat;echo FINISHED>' + gerapadrao_status_filename
++
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/server: xc_gerapadrao.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: __init__.pyc
+diff -rup xml/app_modules/app/validations/article_content_validations.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations/article_content_validations.py
+--- xml/app_modules/app/validations/article_content_validations.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations/article_content_validations.py	2019-12-16 13:45:16.000000000 -0300
+@@ -277,11 +277,79 @@ class ArticleContentValidation(object):
+         """
+         results = attributes.validate_article_type_and_section(self.article.article_type, self.article.toc_section, len(self.article.abstracts) > 0)
+         msg = _('The documents used to generate the bibliometric indicators must have:\na) @article-type ({}); b) contributors and their affiliations; c) own title, not similar to the table of contents title; d) citations; e) and references. ').format(_(', ').join(attributes.INDEXABLE))
++        level = validation_status.STATUS_FATAL_ERROR
++        if self.config.BLOCK_DISAGREEMENT_WITH_COLLECTION_CRITERIA:
++            level = validation_status.STATUS_BLOCKING_ERROR
++
++        errors = []
++        warnings = []
++        if self.article.article_type in attributes.INDEXABLE:
++            if self.article.article_type not in attributes.INDEXABLE_BUT_EXCEPTION \
++                    and not self.article.is_provisional:
++                check = attributes.INDEXABLE_EXCEPTIONS.get(
++                    self.article.article_type,
++                    ['contrib', 'aff', 'xref (bibr)', 'ref']
++                )
++                items = [
++                    ('contrib', len(self.article.article_contrib_items)),
++                    ('aff', len(self.article.article_affiliations)),
++                    ('xref (bibr)', len(self.article.bibr_xref_nodes)),
++                    ('ref', len(self.article.references_xml))]
++                invalid = [label
++                           for label, qtd in items
++                           if label in check and qtd == 0]
++                warning = [label
++                           for label, qtd in items
++                           if label not in check and qtd == 0]
++                if len(warning) > 0:
++                    warnings.append(
++                        _('@article-type="{}" expects: {}. ').format(
++                            self.article.article_type,
++                            ' ; '.join(warning)))
++                if len(invalid) > 0:
++                    errors.append(
++                        _('@article-type="{}" requires: {}. ').format(
++                            self.article.article_type,
++                            ' ; '.join(invalid)))
++                titles = [t.title for t in self.article.titles]
++                _titles = ' / '.join([u'"{}"'.format(t) for t in titles])
++                if utils.is_similar(self.article.toc_section, titles):
++                    warnings.append(
++                        _(u'{} must not be similar to the table of contents section "{}" '.format(
++                            _titles, self.article.toc_section)))
++        else:
++            errors.append(
++                _('@article-type="{}" is not used to generate bibliometric indicators').format(self.article.article_type))
++        if len(errors) > 0:
++            results.append(('@article-type', level, msg))
++            results.append(
++                (
++                    '@article-type',
++                    level,
++                    _('This document will be rejected according to SciELO Collection\'s criteria. ') +
++                    _('Check the criteria of the corresponding SciELO Collection. ')
++                ))
++            results.append(('@article-type', level, ''.join(errors)))
++        if len(warnings) > 0:
++            results.append(('@article-type', validation_status.STATUS_FATAL_ERROR, ''.join(warnings)))
++        return results
++
++    @property
++    def _old_article_type(self):
++        """
++        com autoria e afiliação institucional dos autores,
++        título próprio diferente do título da seção,
++        citações,
++        e referências bibliográficas
++        """
++        results = attributes.validate_article_type_and_section(self.article.article_type, self.article.toc_section, len(self.article.abstracts) > 0)
++        msg = _('The documents used to generate the bibliometric indicators must have:\na) @article-type ({}); b) contributors and their affiliations; c) own title, not similar to the table of contents title; d) citations; e) and references. ').format(_(', ').join(attributes.INDEXABLE))
+         level = validation_status.STATUS_DISAGREED_WITH_COLLECTION_CRITERIA
+ 
+         errors = []
+         if self.article.article_type in attributes.INDEXABLE:
+-            if self.article.article_type not in attributes.INDEXABLE_BUT_EXCEPTION:
++            if self.article.article_type not in attributes.INDEXABLE_BUT_EXCEPTION \
++                    and not self.article.is_provisional:
+                 check = attributes.INDEXABLE_EXCEPTIONS.get(
+                     self.article.article_type,
+                     ['contrib', 'aff', 'xref (bibr)', 'ref']
+@@ -865,6 +933,8 @@ class ArticleContentValidation(object):
+         r.append(self._total(self.article.total_of_references, self.article.ref_count, _('total of references'), 'ref-count'))
+         if self.article.article_type in attributes.REFS_REQUIRED_FOR_DOCTOPIC:
+             if self.article.total_of_references == 0:
++                if self.article.is_provisional:
++                    return r
+                 r.append((_('total of references'), validation_status.STATUS_FATAL_ERROR, _('{requirer} requires {required}. ').format(requirer=self.article.article_type, required=_('references'))))
+         return r
+ 
+@@ -1119,11 +1189,12 @@ class ArticleContentValidation(object):
+     def article_date_types(self):
+         r = []
+         dt = []
++        
+         for fmt, date_type, pub_type, xml in self.article.raw_pubdate_items:
+             if date_type in dt or pub_type in dt:
+                 r.append(
+                     ('pub-date',
+-                     validation_status.STATUS_BLOCKING_ERROR,
++                     validation_status.STATUS_FATAL_ERROR,
+                      _('"pub-date" ({}) is duplicated. ').format(
+                         date_type or pub_type),
+                      xml
+@@ -1133,7 +1204,7 @@ class ArticleContentValidation(object):
+                 dt.append(date_type)
+             if pub_type is not None:
+                 dt.append(pub_type)
+-
++        
+         if self.article.sps_version_number > 1.8:
+             for fmt, date_type, pub_type, xml in self.article.raw_pubdate_items:
+                 if fmt is None:
+@@ -1607,7 +1678,7 @@ class HRefValidation(object):
+         name, ext = os.path.splitext(self.hrefitem.src)
+         if self.hrefitem.src not in self.pkgfiles.related_files:
+             if name not in self.pkgfiles.related_files_by_name.keys():
+-                result.append((validation_status.STATUS_FATAL_ERROR, _('Not found {label} in the {item}. ').format(label=self.hrefitem.src, item=_('package'))))
++                result.append((validation_status.STATUS_BLOCKING_ERROR, _('Not found {label} in the {item}. ').format(label=self.hrefitem.src, item=_('package'))))
+         if '.' not in self.hrefitem.src:
+             result.append((validation_status.STATUS_WARNING, _('missing extension of ') + self.hrefitem.src + '.'))
+         return result
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: article_content_validations.pyc
+diff -rup xml/app_modules/app/validations/article_data_reports.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations/article_data_reports.py
+--- xml/app_modules/app/validations/article_data_reports.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations/article_data_reports.py	2019-10-02 15:42:30.000000000 -0300
+@@ -676,6 +676,13 @@ def display_article_metadata(_article, s
+         r += html_reports.tag('p', _article.doi, 'doi')
+     else:
+         r += html_reports.tag('p', _article.publisher_article_id, 'doi')
++    if _article.previous_pid:
++        r += html_reports.tag(
++            'p',
++            html_reports.tag('strong', "PID (AOP): " + _article.previous_pid))
++    else:
++        r += html_reports.tag(
++            'p', html_reports.tag('strong', "PID (AOP): none"))
+     r += html_reports.tag('p', html_reports.tag('strong', _article.pages), 'fpage')
+     r += display_article_dates(_article, 'p')
+     r += html_reports.tag('p', html_reports.tag('strong', _article.title), 'article-title')
+@@ -770,6 +777,8 @@ class ArticlesComparison(object):
+     @property
+     def status(self):
+         _status = validation_status.STATUS_BLOCKING_ERROR
++        if self.article1.is_provisional or self.article2.is_provisional:
++            _status = validation_status.STATUS_FATAL_ERROR
+         if len(self.exact_comparison_result) == 0:
+             _status = validation_status.STATUS_INFO
+         elif len(self.exact_comparison_result) == 1 and len(self.relaxed_comparison_result) in [0, 1]:
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: article_data_reports.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: article_disp_formula.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: article_tablewrap.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: article_validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: data_validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: merged_articles_validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: pkg_articles_validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: ref_validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: reports_maker.pyc
+diff -rup xml/app_modules/app/validations/sps_xml_validators.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations/sps_xml_validators.py
+--- xml/app_modules/app/validations/sps_xml_validators.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations/sps_xml_validators.py	2021-03-17 09:11:37.000000000 -0300
+@@ -131,6 +131,7 @@ class JavaXMLValidator(object):
+         self.xml_filename = xml_filename
+ 
+     def dtd_validation(self, report_filename):
++        #print((self.xml_filename, report_filename, self.doctype))
+         return java_xml_utils.xml_validate(self.xml_filename, report_filename, self.doctype)
+ 
+     def style_validation(self, report_filename):
+@@ -242,6 +243,8 @@ class XMLValidator(object):
+         self.validator.setup(xml_filename)
+         xml, e = xml_utils.load_xml(xml_filename)
+         errors = []
++        #print((xml_filename, dtd_report_filename, style_report_filename))
++        #print(len(fs_utils.read_file(xml_filename)))
+         if self.dtd_files.database_name == 'scielo':
+             errors = self.validate_doctype(ArticleXMLVersionsInfo(fs_utils.read_file(xml_filename)))
+         is_valid_dtd = self.dtd_validator.dtd_validation(dtd_report_filename)
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: sps_xml_validators.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/validations: validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/ws: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/ws: institutions_db.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/ws: institutions_manager.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/ws: ws_institutions.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/ws: ws_journals.pyc
+diff -rup xml/app_modules/app/xc.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/xc.py
+--- xml/app_modules/app/xc.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/xc.py	2022-08-04 19:13:35.000000000 -0300
+@@ -111,7 +111,9 @@ class XC_Reception(object):
+                     self.transfer.transfer_website_files(acron, issue_id)
+             except Exception as e:
+                 self.mailer.mail_step2_failure(pkgfolder.name, e)
+-                raise
++                print(type(e))
++                print(e)
++                # raise
+             try:
+                 if mail_info is not None and self.configuration.email_subject_package_evaluation is not None:
+                     mail_subject, mail_content = mail_info
+@@ -119,6 +121,8 @@ class XC_Reception(object):
+                 self.transfer.transfer_report_files(acron, issue_id)
+ 
+             except Exception as e:
++                print(type(e))
++                print(e)
+                 self.mailer.mail_step3_failure(pkgfolder.name, e)
+                 if len(package_path) == 1:
+                     encoding.report_exception('convert_package()', e, 'exception as step 3')
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app: xc.py.bkp
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app: xc.pyc
+diff -rup xml/app_modules/app/xpm.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/xpm.py
+--- xml/app_modules/app/xpm.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/app/xpm.py	2019-03-25 09:00:20.000000000 -0300
+@@ -15,6 +15,7 @@ from .pkg_processors import xml_versions
+ 
+ def call_make_packages(args, version):
+     script, xml_path, acron, INTERATIVE, GENERATE_PMC = read_inputs(args)
++    print(script, xml_path, acron, INTERATIVE, GENERATE_PMC)
+     normalized_pkgfiles = None
+     stage = 'xpm'
+     if any([xml_path, acron]):
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/dbm: __init__.pyc
+diff -rup xml/app_modules/generics/dbm/dbm_isis.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/dbm/dbm_isis.py
+--- xml/app_modules/generics/dbm/dbm_isis.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/dbm/dbm_isis.py	2023-06-07 17:29:17.000000000 -0300
+@@ -157,8 +157,11 @@ class IDFile(object):
+                     content = {}
+                     for subf in subfields:
+                         if subf.startswith('^'):
+-                            c = subf[1]
+-                            v = subf[2:]
++                            if len(subf) > 2:
++                                c = subf[1]
++                                v = subf[2:]
++                            else:
++                                print(subfields)
+                         else:
+                             if len(subfields) == 1:
+                                 c = u''
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/dbm: dbm_isis.py.bkp
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/dbm: dbm_isis.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/dbm: dbm_sql.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: doi_validations.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: email_service.pyc
+diff -rup xml/app_modules/generics/encoding.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/encoding.py
+--- xml/app_modules/generics/encoding.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/encoding.py	2019-10-17 08:07:21.000000000 -0300
+@@ -56,32 +56,18 @@ def encode(content, encoding='utf-8', er
+     """
+     if content is not None:
+         if is_encodable(content):
+-            if error_handler in ['xmlcharrefreplace', 'replace', 'ignore']:
++            options = ('xmlcharrefreplace', 'replace', 'ignore')
++            if error_handler in options:
++                options = (error_handler, )
++
++            for error_handler in options:
+                 try:
+                     content = content.encode(encoding, error_handler)
+                 except Exception as e:
+-                    report_exception('encode() 1', e)
+-            else:
+-                try:
+-                    content = content.encode(encoding)
+-                except Exception as e:
+-                    try:
+-                        content = content.encode(encoding, 'xmlcharrefreplace')
+-                        report_exception(
+-                            'encode(): xmlcharrefreplace',
+-                            e,
+-                            content)
+-                    except Exception as e:
+-                        try:
+-                            content = content.encode(encoding, 'replace')
+-                            report_exception('encode(): replace', e, content)
+-                        except Exception as e:
+-                            try:
+-                                content = content.encode(encoding, 'ignore')
+-                                report_exception('encode(): ignore', e, content)
+-                            except Exception as e:
+-                                report_exception('encode() n', e, content)
+-
++                    if error_handler is options[-1]:
++                        raise e
++                else:
++                    break
+     return content
+ 
+ 
+@@ -121,3 +107,4 @@ def display_message(msg):
+ 
+ def fix_args(args):
+     return [decode(arg.replace('\\', '/'), SYS_DEFAULT_ENCODING) for arg in args]
++
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: encoding.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: files_extractor.pyc
+diff -rup xml/app_modules/generics/fs_utils.py /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/fs_utils.py
+--- xml/app_modules/generics/fs_utils.py	2019-04-22 13:48:38.000000000 -0300
++++ /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/fs_utils.py	2023-06-07 14:58:05.000000000 -0300
+@@ -102,6 +102,9 @@ def extract_package(pkg_file, pkg_work_p
+                 for item in os.listdir(temp_dir):
+                     _file = temp_dir + '/' + item
+                     if os.path.isfile(_file):
++                        print(_file)
++                        print(pkg_work_path)
++                        print(item)
+                         shutil.copyfile(_file, pkg_work_path + '/' + item)
+                         delete_file_or_folder(_file)
+                     elif os.path.isdir(_file):
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: fs_utils.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: ftp_service.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: img_utils.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: java_xml_utils.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: logger.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: remote_server.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/reports: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/reports: html_reports.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/reports: validation_status.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: svg_conversion.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: system.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: utils.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/ws: __init__.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/ws: ws_doi.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/ws: ws_proxy.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics/ws: ws_requester.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/generics: xml_utils.pyc
+Only in /Users/roberta.takenaka/xc_2019/xc_2019/xml/app_modules/settings/fst: modules
+Only in xml/app_modules: tools4dsk
+Only in xml: config
+Only in xml: download_markup_journals.bat
+Only in xml: download_markup_journals.py
+Only in xml: install_requirements.bat
+Only in xml: modules
+Only in xml: wayta.py
+Only in xml: xc_server.py
+Only in xml: xml_converter.bat
+Only in xml: xml_converter.py
+Only in xml: xml_package_maker.bat
+Only in xml: xml_package_maker.py
+Only in xml: xml_pubmed.py
+Only in xml: xml_transform.py
