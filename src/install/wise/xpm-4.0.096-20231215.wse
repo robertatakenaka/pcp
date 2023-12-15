@@ -16,7 +16,7 @@ item: Global
   Log Pathname=%MAINDIR%\INSTALL.LOG
   Message Font=MS Sans Serif
   Font Size=8
-  Icon Pathname=c:\src\scielo\bin\codes\forms\SCIELO.ICO
+  Icon Pathname=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\codes\forms\SCIELO.ICO
   Pages Modified=00110001011101001000001100001011
   Extra Pages=00000000000000000000000000110010
   Disk Filename=SETUP
@@ -24,7 +24,7 @@ item: Global
   Patch Threshold=85
   Patch Memory=4000
   EXE Filename=xpm_4.0.096-x-x.exe
-  Language INI Filename=c:\src\install\wise\languages.ini
+  Language INI Filename=e:\github.com\scieloorg\pcp\pcp\src\install\wise\languages.ini
   FTP Cluster Size=20
   Per-User Version ID=1
   Dialogs Version=7
@@ -32,7 +32,7 @@ item: Global
   Version Description=SciELO XPM
   Version Copyright=2019
   Version Company=SciELO
-  Distribute Path=C:\2007\scielo
+  Distribute Path=e:\github.com\scieloorg\pcp\pcp\src\scielo
   Distribute Type=1
   Step View=All
   Variable Name1=_SYS_
@@ -70,7 +70,7 @@ item: Get Temporary Filename
   Variable=READMEFILE
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\install\wise\xpm-readme.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\install\wise\xpm-readme.txt
   Destination=%TEMP%\%READMEFILE%
   Flags=0000000000100010
 end
@@ -1019,912 +1019,912 @@ item: Check Disk Space
   Component=COMPONENTS
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\tools\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\tools\__init__.py
   Destination=%PROGDIR%\xml\app_modules\tools\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\tools\requirements_checker.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\tools\requirements_checker.py
   Destination=%PROGDIR%\xml\app_modules\tools\requirements_checker.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\requirements.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\requirements.txt
   Destination=%PROGDIR%\xml\app_modules\settings\requirements.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\xc.sql
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\xc.sql
   Destination=%PROGDIR%\xml\app_modules\settings\tables\xc.sql
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\xc.db
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\xc.db
   Destination=%PROGDIR%\xml\app_modules\settings\tables\xc.db
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\symbols.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\symbols.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\symbols.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\orgname_location_country.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\orgname_location_country.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\orgname_location_country.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\licenses.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\licenses.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\licenses.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\entities.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\entities.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\entities.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\fst\title.fst
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\fst\title.fst
   Destination=%PROGDIR%\xml\app_modules\settings\fst\modules\title.fst
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\fst\issue.fst
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\fst\issue.fst
   Destination=%PROGDIR%\xml\app_modules\settings\fst\issue.fst
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\fst\articles.fst
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\fst\articles.fst
   Destination=%PROGDIR%\xml\app_modules\settings\fst\articles.fst
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\xml2pmc.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\xml2pmc.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\sgml2xml\xml2pmc.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\sgml2xml.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\sgml2xml.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\sgml2xml\sgml2xml.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\sgml2generic.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\sgml2generic.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\sgml2xml\sgml2generic.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\sgm2win2.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\sgm2win2.txt
   Destination=%PROGDIR%\pmc\j1.1\xsl\sgml2xml\sgm2win2.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\pmc.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\pmc.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\sgml2xml\pmc.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\local_dtd.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\sgml2xml\local_dtd.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\sgml2xml\local_dtd.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\scielo-style\stylechecker.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\scielo-style\stylechecker.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\scielo-style\stylechecker.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-named-tests.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-named-tests.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-named-tests.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-match-templates.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-match-templates.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-match-templates.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-helper-templates.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-helper-templates.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\nlm-style-5.15\stylecheck-helper-templates.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\style-reporter.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\style-reporter.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\nlm-style-5.15\style-reporter.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\nlm-stylechecker.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\xsl\nlm-style-5.15\nlm-stylechecker.xsl
   Destination=%PROGDIR%\pmc\j1.1\xsl\nlm-style-5.15\nlm-stylechecker.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\Publishing-Readme.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\Publishing-Readme.txt
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\Publishing-Readme.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk4.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk4.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk4.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk2.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xmlchars\isogrk1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xhtml-table-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xhtml-table-1.mod
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xhtml-table-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xhtml-inlstyle-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xhtml-inlstyle-1.mod
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\xhtml-inlstyle-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml2.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml2.dtd
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml2.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml2-qname-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml2-qname-1.mod
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml2-qname-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml\mmlextra.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml\mmlextra.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml\mmlextra.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml\mmlalias.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml\mmlalias.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\mathml\mmlalias.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-xmlspecchars1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-xmlspecchars1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-xmlspecchars1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-XHTMLtablesetup1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-XHTMLtablesetup1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-XHTMLtablesetup1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-section1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-section1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-section1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-related-object1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-related-object1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-related-object1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-references1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-references1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-references1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-phrase1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-phrase1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-phrase1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-para1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-para1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-para1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-notat1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-notat1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-notat1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-nlmcitation1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-nlmcitation1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-nlmcitation1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-modules1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-modules1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-modules1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-mathmlsetup1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-mathmlsetup1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-mathmlsetup1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-math1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-math1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-math1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-list1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-list1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-list1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-link1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-link1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-link1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpublishing1.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpublishing1.dtd
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpublishing1.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-modules1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-modules1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-modules1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-models1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-models1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-models1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-mixes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-mixes1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-mixes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-classes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-classes1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalpubcustom-classes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalmeta1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalmeta1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-journalmeta1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-funding1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-funding1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-funding1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-format1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-format1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-format1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-display1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-display1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-display1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-default-mixes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-default-mixes1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-default-mixes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-default-classes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-default-classes1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-default-classes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-common1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-common1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-common1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-common-atts1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-common-atts1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-common-atts1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-chars1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-chars1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-chars1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-backmatter1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-backmatter1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-backmatter1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-articlemeta1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-articlemeta1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-articlemeta1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-ali-namespace1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-ali-namespace1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\JATS-ali-namespace1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isotech.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isotech.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isotech.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomscr.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomscr.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomscr.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomopf.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomopf.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomopf.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomfrk.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomfrk.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isomfrk.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isogrk3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isogrk3.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isogrk3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsr.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsr.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsr.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamso.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamso.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamso.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsn.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsn.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsn.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsc.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsc.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsc.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsb.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsb.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsb.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsa.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsa.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso9573-13\isoamsa.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isopub.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isopub.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isopub.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isonum.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isonum.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isonum.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isolat2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isolat2.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isolat2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isolat1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isolat1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isolat1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isodia.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isodia.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isodia.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isocyr2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isocyr2.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isocyr2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isocyr1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isocyr1.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isocyr1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isobox.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isobox.ent
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\iso8879\isobox.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\catalog-jats-v1-1-with-base.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\catalog-jats-v1-1-with-base.xml
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\catalog-jats-v1-1-with-base.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\catalog-jats-v1-1-no-base.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\catalog-jats-v1-1-no-base.xml
   Destination=%PROGDIR%\pmc\j1.1\JATS-Publishing-1-1-MathML2-DTD\JATS-Publishing-1-1-MathML2-DTD\catalog-jats-v1-1-no-base.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\xml_package_maker.bat
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\xml_package_maker.bat
   Destination=%PROGDIR%\xml\xml_package_maker.bat
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\xml_package_maker.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\xml_package_maker.py
   Destination=%PROGDIR%\xml\xml_package_maker.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\install_requirements.bat
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\install_requirements.bat
   Destination=%PROGDIR%\xml\install_requirements.bat
   Flags=0000000010000010
 end
 remarked item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\run_app.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\run_app.py
   Destination=%PROGDIR%\xml\run_app.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\__init__.py
   Destination=%PROGDIR%\xml\app_modules\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\pkg_articles_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\pkg_articles_validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\pkg_articles_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\logger.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\logger.py
   Destination=%PROGDIR%\xml\app_modules\generics\logger.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\doi_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\doi_validations.py
   Destination=%PROGDIR%\xml\app_modules\generics\doi_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\ref_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\ref_validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\ref_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\server\mailer.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\server\mailer.py
   Destination=%PROGDIR%\xml\app_modules\app\server\mailer.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\server\filestransfer.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\server\filestransfer.py
   Destination=%PROGDIR%\xml\app_modules\app\server\filestransfer.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\server\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\server\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\server\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\utils.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\utils.py
   Destination=%PROGDIR%\xml\app_modules\generics\utils.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\xml_versions.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\xml_versions.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\xml_versions.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\system.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\system.py
   Destination=%PROGDIR%\xml\app_modules\generics\system.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\symbols.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\symbols.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\symbols.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\dbm\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\dbm\__init__.py
   Destination=%PROGDIR%\xml\app_modules\generics\dbm\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\sps_pkgmaker.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\sps_pkgmaker.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\sps_pkgmaker.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\sgmlxml.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\sgmlxml.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\sgmlxml.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\svg_conversion.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\svg_conversion.py
   Destination=%PROGDIR%\xml\app_modules\generics\svg_conversion.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\pmc_pkgmaker.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\pmc_pkgmaker.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\pmc_pkgmaker.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\pkg_processors.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\pkg_processors.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\pkg_processors.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\reports_maker.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\reports_maker.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\reports_maker.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\dbm\dbm_sql.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\dbm\dbm_sql.py
   Destination=%PROGDIR%\xml\app_modules\generics\dbm\dbm_sql.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\sps_xml_validators.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\sps_xml_validators.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\sps_xml_validators.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\dbm\dbm_isis.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\dbm\dbm_isis.py
   Destination=%PROGDIR%\xml\app_modules\generics\dbm\dbm_isis.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\reports\validation_status.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\reports\validation_status.py
   Destination=%PROGDIR%\xml\app_modules\generics\reports\validation_status.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\pkg_processors\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\pkg_processors\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\pkg_processors\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\reports\html_reports.css
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\reports\html_reports.css
   Destination=%PROGDIR%\xml\app_modules\generics\reports\html_reports.css
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\db\xc_models.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\db\xc_models.py
   Destination=%PROGDIR%\xml\app_modules\app\db\xc_models.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\db\serial.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\db\serial.py
   Destination=%PROGDIR%\xml\app_modules\app\db\serial.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\db\registered.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\db\registered.py
   Destination=%PROGDIR%\xml\app_modules\app\db\registered.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\ws\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\ws\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\ws\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\reports\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\reports\__init__.py
   Destination=%PROGDIR%\xml\app_modules\generics\reports\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\data_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\data_validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\data_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\files_extractor.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\files_extractor.py
   Destination=%PROGDIR%\xml\app_modules\generics\files_extractor.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\ws\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\ws\__init__.py
   Destination=%PROGDIR%\xml\app_modules\generics\ws\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\db\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\db\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\db\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\__init__.py
   Destination=%PROGDIR%\xml\app_modules\generics\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\workarea.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\workarea.py
   Destination=%PROGDIR%\xml\app_modules\app\data\workarea.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\xml_utils.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\xml_utils.py
   Destination=%PROGDIR%\xml\app_modules\generics\xml_utils.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\package.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\package.py
   Destination=%PROGDIR%\xml\app_modules\app\data\package.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\reports\html_reports_collapsible.js
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\reports\html_reports_collapsible.js
   Destination=%PROGDIR%\xml\app_modules\generics\reports\html_reports_collapsible.js
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\merged.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\merged.py
   Destination=%PROGDIR%\xml\app_modules\app\data\merged.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\ws\ws_proxy_gui.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\ws\ws_proxy_gui.py
   Destination=%PROGDIR%\xml\app_modules\generics\ws\ws_proxy_gui.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\ws\ws_requester.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\ws\ws_requester.py
   Destination=%PROGDIR%\xml\app_modules\generics\ws\ws_requester.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\ws\ws_proxy.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\ws\ws_proxy.py
   Destination=%PROGDIR%\xml\app_modules\generics\ws\ws_proxy.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\attributes.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\attributes.py
   Destination=%PROGDIR%\xml\app_modules\app\data\attributes.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\reports\text_report.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\reports\text_report.py
   Destination=%PROGDIR%\xml\app_modules\generics\reports\text_report.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\article.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\article.py
   Destination=%PROGDIR%\xml\app_modules\app\data\article.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\ws\ws_doi.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\ws\ws_doi.py
   Destination=%PROGDIR%\xml\app_modules\generics\ws\ws_doi.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\aff_normalization.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\aff_normalization.py
   Destination=%PROGDIR%\xml\app_modules\app\data\aff_normalization.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\article_disp_formula.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\article_disp_formula.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\article_disp_formula.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\article_tablewrap.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\article_tablewrap.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\article_tablewrap.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\article_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\article_validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\article_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\fs_utils.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\fs_utils.py
   Destination=%PROGDIR%\xml\app_modules\generics\fs_utils.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\article_data_reports.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\article_data_reports.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\article_data_reports.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\ftp_service.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\ftp_service.py
   Destination=%PROGDIR%\xml\app_modules\generics\ftp_service.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\article_content_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\article_content_validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\article_content_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\article_disp_formula.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\article_disp_formula.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\article_disp_formula.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\ws\institutions_db.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\ws\institutions_db.py
   Destination=%PROGDIR%\xml\app_modules\app\ws\institutions_db.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\reports\html_reports.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\reports\html_reports.py
   Destination=%PROGDIR%\xml\app_modules\generics\reports\html_reports.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\data\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\data\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\data\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\email_service.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\email_service.py
   Destination=%PROGDIR%\xml\app_modules\generics\email_service.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\config\config.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\config\config.py
   Destination=%PROGDIR%\xml\app_modules\app\config\config.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\validations\merged_articles_validations.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\validations\merged_articles_validations.py
   Destination=%PROGDIR%\xml\app_modules\app\validations\merged_articles_validations.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\config\app_texts.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\config\app_texts.py
   Destination=%PROGDIR%\xml\app_modules\app\config\app_texts.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\config\app_caller.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\config\app_caller.py
   Destination=%PROGDIR%\xml\app_modules\app\config\app_caller.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\ws\institutions_manager.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\ws\institutions_manager.py
   Destination=%PROGDIR%\xml\app_modules\app\ws\institutions_manager.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\remote_server.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\remote_server.py
   Destination=%PROGDIR%\xml\app_modules\generics\remote_server.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\ws\institutions_service.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\ws\institutions_service.py
   Destination=%PROGDIR%\xml\app_modules\app\ws\institutions_service.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\encoding.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\encoding.py
   Destination=%PROGDIR%\xml\app_modules\generics\encoding.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\config\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\config\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\config\__init__.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\ws\ws_institutions.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\ws\ws_institutions.py
   Destination=%PROGDIR%\xml\app_modules\app\ws\ws_institutions.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\java_xml_utils.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\java_xml_utils.py
   Destination=%PROGDIR%\xml\app_modules\generics\java_xml_utils.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\ws\ws_journals.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\ws\ws_journals.py
   Destination=%PROGDIR%\xml\app_modules\app\ws\ws_journals.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\generics\img_utils.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\generics\img_utils.py
   Destination=%PROGDIR%\xml\app_modules\generics\img_utils.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\xpm.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\xpm.py
   Destination=%PROGDIR%\xml\app_modules\app\xpm.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\xc.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\xc.py
   Destination=%PROGDIR%\xml\app_modules\app\xc.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\interface.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\interface.py
   Destination=%PROGDIR%\xml\app_modules\app\interface.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\article_utils.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\article_utils.py
   Destination=%PROGDIR%\xml\app_modules\app\article_utils.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\app\__init__.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\app\__init__.py
   Destination=%PROGDIR%\xml\app_modules\app\__init__.py
   Flags=0000000010000010
 end
@@ -1944,527 +1944,527 @@ item: Install File
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\cfg\xpm_version.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\cfg\xpm_version.txt
   Destination=%PROGDIR%\xpm_version.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt_BR\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_ES\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es_MX\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\es\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\pt\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.po
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.po
   Destination=%PROGDIR%\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.po
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.mo
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.mo
   Destination=%PROGDIR%\xml\app_modules\settings\locale\en\LC_MESSAGES\xpm-xc.mo
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\licenses.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\licenses.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\licenses.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\xc.db
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\xc.db
   Destination=%PROGDIR%\xml\app_modules\settings\tables\xc.db
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\symbols.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\symbols.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\symbols.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\orgname_location_country.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\orgname_location_country.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\orgname_location_country.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\entities.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\entities.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\entities.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\xml_package_maker.bat
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\xml_package_maker.bat
   Destination=%PROGDIR%\xml\xml_package_maker.bat
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\xml_package_maker.py
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\xml_package_maker.py
   Destination=%PROGDIR%\xml\xml_package_maker.py
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\xml\app_modules\settings\tables\entities.csv
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\xml\app_modules\settings\tables\entities.csv
   Destination=%PROGDIR%\xml\app_modules\settings\tables\entities.csv
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\xml2pmc.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\xml2pmc.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\sgml2xml\xml2pmc.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\sgml2xml.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\sgml2xml.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\sgml2xml\sgml2xml.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\sgml2generic.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\sgml2generic.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\sgml2xml\sgml2generic.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\sgm2win2.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\sgm2win2.txt
   Destination=%PROGDIR%\pmc\j1.0\xsl\sgml2xml\sgm2win2.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\pmc.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\pmc.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\sgml2xml\pmc.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\local_dtd.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\sgml2xml\local_dtd.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\sgml2xml\local_dtd.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\scielo-style\stylechecker.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\scielo-style\stylechecker.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\scielo-style\stylechecker.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\nlm-stylechecker.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\nlm-stylechecker.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\nlm-style-5.13\nlm-stylechecker.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-named-tests.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-named-tests.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-named-tests.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-match-templates.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-match-templates.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-match-templates.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-helper-templates.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-helper-templates.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\nlm-style-5.13\stylecheck-helper-templates.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\style-reporter.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\xsl\nlm-style-5.13\style-reporter.xsl
   Destination=%PROGDIR%\pmc\j1.0\xsl\nlm-style-5.13\style-reporter.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk4.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk4.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk4.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk2.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\xmlchars\isogrk1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xhtml-table-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xhtml-table-1.mod
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\xhtml-table-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xhtml-inlstyle-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\xhtml-inlstyle-1.mod
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\xhtml-inlstyle-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplesmall-pub1.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplesmall-pub1.xml
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\Smallsamples\samplesmall-pub1.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplesmall-base1.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplesmall-base1.xml
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\Smallsamples\samplesmall-base1.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplepub-oasis-table1.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplepub-oasis-table1.xml
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\Smallsamples\samplepub-oasis-table1.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplepub-oasis-and-xhtml1.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\Smallsamples\samplepub-oasis-and-xhtml1.xml
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\Smallsamples\samplepub-oasis-and-xhtml1.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\oasis-exchange.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\oasis-exchange.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\oasis-exchange.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml2.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml2.dtd
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\mathml2.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml2-qname-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml2-qname-1.mod
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\mathml2-qname-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml\mmlextra.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml\mmlextra.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\mathml\mmlextra.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml\mmlalias.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\mathml\mmlalias.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\mathml\mmlalias.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-xmlspecchars1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-xmlspecchars1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-xmlspecchars1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-XHTMLtablesetup1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-XHTMLtablesetup1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-XHTMLtablesetup1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-section1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-section1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-section1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-related-object1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-related-object1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-related-object1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-references1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-references1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-references1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-phrase1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-phrase1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-phrase1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-para1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-para1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-para1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-oasis-tablesetup1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-oasis-tablesetup1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-oasis-tablesetup1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-oasis-namespace1a.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-oasis-namespace1a.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-oasis-namespace1a.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-oasis-namespace1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-oasis-namespace1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-oasis-namespace1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-notat1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-notat1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-notat1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-nlmcitation1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-nlmcitation1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-nlmcitation1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-modules1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-modules1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-modules1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-mathmlsetup1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-mathmlsetup1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-mathmlsetup1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-math1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-math1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-math1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-list1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-list1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-list1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-link1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-link1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-link1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpublishing1.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpublishing1.dtd
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpublishing1.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpublishing-oasis-article1.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpublishing-oasis-article1.dtd
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpublishing-oasis-article1.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-modules1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-modules1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-modules1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-models1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-models1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-models1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-mixes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-mixes1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-mixes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-classes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-classes1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpubcustom-classes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpub-oasis-custom-modules1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpub-oasis-custom-modules1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpub-oasis-custom-modules1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpub-oasis-custom-classes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalpub-oasis-custom-classes1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalpub-oasis-custom-classes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalmeta1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-journalmeta1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-journalmeta1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-funding1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-funding1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-funding1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-format1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-format1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-format1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-display1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-display1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-display1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-default-mixes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-default-mixes1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-default-mixes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-default-classes1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-default-classes1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-default-classes1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-common1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-common1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-common1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-chars1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-chars1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-chars1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-base-test1.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-base-test1.dtd
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-base-test1.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-backmatter1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-backmatter1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-backmatter1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-articlemeta1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\JATS-articlemeta1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\JATS-articlemeta1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isotech.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isotech.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isotech.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isomscr.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isomscr.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isomscr.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isomopf.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isomopf.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isomopf.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isomfrk.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isomfrk.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isomfrk.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsr.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsr.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsr.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isogrk3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isogrk3.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isogrk3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamso.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamso.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamso.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsn.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsn.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsn.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsc.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsc.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsc.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsb.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsb.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsb.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsa.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsa.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso9573-13\isoamsa.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isopub.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isopub.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isopub.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isonum.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isonum.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isonum.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isolat2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isolat2.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isolat2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isolat1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isolat1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isolat1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isodia.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isodia.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isodia.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isocyr2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isocyr2.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isocyr2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isocyr1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isocyr1.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isocyr1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isobox.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\iso8879\isobox.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\iso8879\isobox.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\catalog.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\catalog.ent
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\catalog.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\catalog-test-jats-v1.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\catalog-test-jats-v1.xml
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\catalog-test-jats-v1.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\j1.0\dtd\jats1.0\catalog-jats-v1.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\j1.0\dtd\jats1.0\catalog-jats-v1.xml
   Destination=%PROGDIR%\pmc\j1.0\dtd\jats1.0\catalog-jats-v1.xml
   Flags=0000000010000010
 end
@@ -2478,527 +2478,527 @@ end
 item: End Block
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\scielo-style\bicolortable.css
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\scielo-style\bicolortable.css
   Destination=%PROGDIR%\pmc\v3.0\xsl\scielo-style\bicolortable.css
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\scielo-style\datareport.css
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\scielo-style\datareport.css
   Destination=%PROGDIR%\pmc\v3.0\xsl\scielo-style\datareport.css
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\scielo-style\toc.css
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\scielo-style\toc.css
   Destination=%PROGDIR%\pmc\v3.0\xsl\scielo-style\toc.css
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\xml2pmc.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\xml2pmc.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\sgml2xml\xml2pmc.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\sgml2xml.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\sgml2xml.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\sgml2xml\sgml2xml.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\sgml2generic.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\sgml2generic.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\sgml2xml\sgml2generic.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\sgm2win2.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\sgm2win2.txt
   Destination=%PROGDIR%\pmc\v3.0\xsl\sgml2xml\sgm2win2.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\pmc.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\pmc.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\sgml2xml\pmc.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\local_dtd.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\sgml2xml\local_dtd.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\sgml2xml\local_dtd.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\scielo-style\stylechecker.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\scielo-style\stylechecker.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\scielo-style\stylechecker.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-named-tests.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-named-tests.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-named-tests.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-match-templates.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-match-templates.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-match-templates.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-helper-templates.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-helper-templates.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\nlm-style-4.6.6\stylecheck-helper-templates.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\style-reporter.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\style-reporter.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\nlm-style-4.6.6\style-reporter.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\nlm-stylechecker.xsl
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\xsl\nlm-style-4.6.6\nlm-stylechecker.xsl
   Destination=%PROGDIR%\pmc\v3.0\xsl\nlm-style-4.6.6\nlm-stylechecker.xsl
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\xmlspecchars3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\xmlspecchars3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\xmlspecchars3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\xmlchars\isogrk4.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\xmlchars\isogrk4.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\xmlchars\isogrk4.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\xmlchars\isogrk2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\xmlchars\isogrk2.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\xmlchars\isogrk2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\xmlchars\isogrk1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\xmlchars\isogrk1.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\xmlchars\isogrk1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\XHTMLtablesetup3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\XHTMLtablesetup3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\XHTMLtablesetup3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\xhtml-table-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\xhtml-table-1.mod
   Destination=%PROGDIR%\pmc\v3.0\dtd\xhtml-table-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\xhtml-inlstyle-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\xhtml-inlstyle-1.mod
   Destination=%PROGDIR%\pmc\v3.0\dtd\xhtml-inlstyle-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\Smallsamples\samplesmall3-pub.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\Smallsamples\samplesmall3-pub.xml
   Destination=%PROGDIR%\pmc\v3.0\dtd\Smallsamples\samplesmall3-pub.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\Smallsamples\samplesmall3-base.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\Smallsamples\samplesmall3-base.xml
   Destination=%PROGDIR%\pmc\v3.0\dtd\Smallsamples\samplesmall3-base.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\section3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\section3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\section3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\related-object3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\related-object3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\related-object3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\references3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\references3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\references3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\phrase3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\phrase3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\phrase3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\para3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\para3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\para3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\oasis-tablesetup3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\oasis-tablesetup3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\oasis-tablesetup3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\oasis-exchange.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\oasis-exchange.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\oasis-exchange.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\notat3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\notat3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\notat3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\nlmcitation3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\nlmcitation3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\nlmcitation3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\modules3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\modules3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\modules3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\mathmlsetup3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\mathmlsetup3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\mathmlsetup3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\mathml2.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\mathml2.dtd
   Destination=%PROGDIR%\pmc\v3.0\dtd\mathml2.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\mathml2-qname-1.mod
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\mathml2-qname-1.mod
   Destination=%PROGDIR%\pmc\v3.0\dtd\mathml2-qname-1.mod
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\mathml\mmlextra.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\mathml\mmlextra.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\mathml\mmlextra.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\mathml\mmlalias.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\mathml\mmlalias.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\mathml\mmlalias.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\math3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\math3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\math3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\list3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\list3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\list3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\link3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\link3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\link3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\journalpublishing3.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\journalpublishing3.dtd
   Destination=%PROGDIR%\pmc\v3.0\dtd\journalpublishing3.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-modules3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-modules3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\journalpubcustom-modules3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-models3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-models3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\journalpubcustom-models3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-mixes3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-mixes3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\journalpubcustom-mixes3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-classes3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\journalpubcustom-classes3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\journalpubcustom-classes3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\journalmeta3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\journalmeta3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\journalmeta3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isotech.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isotech.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isotech.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isomscr.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isomscr.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isomscr.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isomopf.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isomopf.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isomopf.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isomfrk.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isomfrk.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isomfrk.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isogrk3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isogrk3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isogrk3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsr.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsr.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isoamsr.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamso.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamso.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isoamso.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsn.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsn.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isoamsn.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsc.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsc.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isoamsc.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsb.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsb.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isoamsb.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsa.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso9573-13\isoamsa.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso9573-13\isoamsa.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isopub.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isopub.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isopub.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isonum.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isonum.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isonum.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isolat2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isolat2.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isolat2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isolat1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isolat1.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isolat1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isodia.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isodia.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isodia.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isocyr2.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isocyr2.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isocyr2.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isocyr1.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isocyr1.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isocyr1.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\iso8879\isobox.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\iso8879\isobox.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\iso8879\isobox.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\htmltable.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\htmltable.dtd
   Destination=%PROGDIR%\pmc\v3.0\dtd\htmltable.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\funding3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\funding3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\funding3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\format3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\format3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\format3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\display3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\display3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\display3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\default-mixes3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\default-mixes3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\default-mixes3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\default-classes3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\default-classes3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\default-classes3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\common3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\common3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\common3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\chars3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\chars3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\chars3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\catalog.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\catalog.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\catalog.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\catalog-v3.xml
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\catalog-v3.xml
   Destination=%PROGDIR%\pmc\v3.0\dtd\catalog-v3.xml
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\base-test3.dtd
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\base-test3.dtd
   Destination=%PROGDIR%\pmc\v3.0\dtd\base-test3.dtd
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\backmatter3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\backmatter3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\backmatter3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\articlemeta3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\articlemeta3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\articlemeta3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\pmc\v3.0\dtd\annotation3.ent
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\pmc\v3.0\dtd\annotation3.ent
   Destination=%PROGDIR%\pmc\v3.0\dtd\annotation3.ent
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-dom4j.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-dom4j.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-dom4j.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-dom.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-dom.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-dom.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\UNICODE.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\UNICODE.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\UNICODE.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\THAI.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\THAI.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\THAI.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\LICENSE.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\LICENSE.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\LICENSE.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\LEGAL.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\LEGAL.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\LEGAL.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\JAMESCLARK.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\JAMESCLARK.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\JAMESCLARK.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\GPL+CLASSPATH.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\GPL+CLASSPATH.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\GPL+CLASSPATH.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\FRIJTERS.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\FRIJTERS.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\FRIJTERS.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\CERN.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\CERN.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\CERN.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\APACHE-XERCES.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\APACHE-XERCES.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\APACHE-XERCES.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\APACHE-RESOLVER.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\APACHE-RESOLVER.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\APACHE-RESOLVER.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\notices\APACHE-ANT.txt
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\notices\APACHE-ANT.txt
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\notices\APACHE-ANT.txt
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\doc\saxondocs.css
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\doc\saxondocs.css
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\doc\saxondocs.css
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\doc\index.html
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\doc\index.html
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\doc\index.html
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\doc\img\saxonica_logo.gif
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\doc\img\saxonica_logo.gif
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\doc\img\saxonica_logo.gif
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-jdom.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-jdom.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-jdom.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-s9api.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-s9api.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-s9api.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-sql.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-sql.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-sql.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-xom.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-xom.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-xom.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-xpath.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-xpath.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-xpath.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-xqj.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9-xqj.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9-xqj.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\saxonb9-1-0-8j\saxon9.jar
   Destination=%PROGDIR%\jar\saxonb9-1-0-8j\saxon9.jar
   Flags=0000000010000010
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\jar\XMLCheck.jar
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\jar\XMLCheck.jar
   Destination=%PROGDIR%\jar\XMLCheck.jar
   Flags=0000000010000010
 end
@@ -3009,7 +3009,7 @@ remarked item: Include Script
   Pathname=%_WISE_%\INCLUDE\vb6.wse
 end
 item: Install File
-  Source=e:\github.com\scieloorg\PC-Programs\src\scielo\bin\scielo_paths.example.ini
+  Source=e:\github.com\scieloorg\pcp\pcp\src\scielo\bin\scielo_paths.example.ini
   Destination=%PROGDIR%\scielo_paths.example.ini
   Flags=0000000010000010
 end
