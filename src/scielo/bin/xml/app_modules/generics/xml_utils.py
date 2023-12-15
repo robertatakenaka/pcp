@@ -74,7 +74,10 @@ class XMLContent(object):
                 xml = xml[:xml.rfind('>')+1]
         else:
             self.filename = xml
-            xml = fs_utils.read_file(self.filename)
+            try:
+                xml = fs_utils.read_file(self.filename)
+            except Exception as e:
+                print("Unable to read file %s %s %s" % (self.filename, type(e), e))
         self.content = self._normalize(xml)
 
     @property
