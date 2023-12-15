@@ -1,3 +1,14 @@
+4.0.096 15/12/2023
+==================
+- Installation
+  - (enhancement) Indica em requirements.txt as versões de packtools e pillow
+  - (enhancement) Atualiza install_requirements.bat para usar requirements.txt
+  - (enhancement) Troca as chamadas de pip para python -m pip para não precisar adicionar pip.exe como exceção no antivírus ou similar para não ser bloqueado; será necessário adicionar apenas python.exe
+  - (enhancement) Apresenta mensgem de erro mais detalhada quando não conseguir importar pillow ou packtools
+
+- XPM/XC
+  - (enhancement) Apresenta mensgem de erro mais detalhada quando não conseguir ler arquivo XML
+
 4.0.096 22/04/2019
 ==================
 - XPM
