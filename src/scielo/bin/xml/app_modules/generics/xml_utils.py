@@ -1,5 +1,6 @@
 # coding=utf-8
 import os
+import logging
 import shutil
 import tempfile
 
@@ -78,6 +79,8 @@ class XMLContent(object):
                 xml = fs_utils.read_file(self.filename)
             except Exception as e:
                 print("Unable to read file %s %s %s" % (self.filename, type(e), e))
+                logging.exception(e)
+                raise e
         self.content = self._normalize(xml)
 
     @property
