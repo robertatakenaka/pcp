@@ -1,2 +1,2 @@
-pillow
-packtools
+pillow==6.2.2
+packtools@https://github.com/scieloorg/packtools/archive/refs/tags/2.15.zip
