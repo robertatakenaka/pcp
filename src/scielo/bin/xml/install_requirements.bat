@@ -1,1 +1,1 @@
-python -m pip install -r app_modules/settings/requirements.txt
+python -m pip install -U -r app_modules/settings/requirements.txt
