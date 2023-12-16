@@ -6770,8 +6770,7 @@ end
 item: End Block
 end
 item: Create Shortcut
-  Source=%PROGDIR%\bin\xml\xml_converter.py
-  Source Portuguese=%PROGDIR%\bin\xml\xml_converter.bat
+  Source=%PROGDIR%\bin\xml\xml_converter.bat
   Destination=%GROUP%\XML Converter.lnk
   Destination Portuguese=%GROUP%\XML Converter.lnk
   Command Options=%PROGDIR%\bin\xml\xml_converter.bat
@@ -6781,12 +6780,12 @@ item: Create Shortcut
   Icon Number Portuguese=0
   Icon Pathname=%PROGDIR%\bin\SGMLPars\Scielo.ico
   Icon Pathname Portuguese=%PROGDIR%\bin\SGMLPars\Scielo.ico
+  Key Type=1536
   Key Type Portuguese=1536
   Flags=00000001
 end
 item: Create Shortcut
-  Source=%PROGDIR%\bin\xml\xml_package_maker.py
-  Source Portuguese=%PROGDIR%\bin\xml\xml_package_maker.py
+  Source=%PROGDIR%\bin\xml\xml_package_maker.bat
   Destination=%GROUP%\XML Package Maker.lnk
   Destination Portuguese=%GROUP%\XML Package Maker.lnk
   Command Options=%PROGDIR%\bin\xml\xml_package_maker.bat
@@ -6796,12 +6795,12 @@ item: Create Shortcut
   Icon Number Portuguese=0
   Icon Pathname=%PROGDIR%\bin\SGMLPars\Scielo.ico
   Icon Pathname Portuguese=%PROGDIR%\bin\SGMLPars\Scielo.ico
+  Key Type=1536
   Key Type Portuguese=1536
   Flags=00000001
 end
 item: Create Shortcut
-  Source=%PROGDIR%\bin\xml\download_markup_journals.py
-  Source Portuguese=%PROGDIR%\bin\xml\download_markup_journals.bat
+  Source=%PROGDIR%\bin\xml\download_markup_journals.bat
   Destination=%GROUP%\Markup - update journals list.lnk
   Destination Portuguese=%GROUP%\Markup - update journals list.lnk
   Command Options=%PROGDIR%\bin\xml\download_markup_journals.bat
@@ -6811,6 +6810,7 @@ item: Create Shortcut
   Icon Number Portuguese=0
   Icon Pathname=%PROGDIR%\bin\SGMLPars\scielo.ico
   Icon Pathname Portuguese=%PROGDIR%\bin\SGMLPars\scielo.ico
+  Key Type=1536
   Key Type Portuguese=1536
   Flags=00000001
 end
@@ -6930,6 +6930,21 @@ item: Execute Program
   Pathname=python
   Command Line= %PROGDIR%\bin\cfg\configure_paths.py %PROGDIR% %DATADIR% %MYSCIELOURL%
   Flags=00000110
+end
+item: Check if File/Dir Exists
+  Pathname=%PROGDIR%\logs
+  Flags=00000101
+end
+item: Create Directory
+  Pathname=%PROGDIR%\logs
+end
+item: End Block
+end
+item: Execute Program
+  Pathname=%PROGDIR%\bin\xml\install_requirements.bat
+  Command Line=%PROGDIR%\bin\xml %PROGDIR%\logs\pip_freeze_backup.log
+  Default Directory=%PROGDIR%\bin\xml
+  Flags=00000100
 end
 remarked item: Execute Program
   Pathname=python
