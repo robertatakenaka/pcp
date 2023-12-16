@@ -105,7 +105,7 @@ class VirtualEnv(object):
                         self.proxy.parameter)
                     )
                 commands.append(
-                    'pip install {} virtualenv'.format(self.proxy.parameter)
+                    'python -m pip install {} virtualenv'.format(self.proxy.parameter)
                     )
                 commands.append(u'virtualenv "{}"'.format(self.path))
                 for cmd in commands:
@@ -167,15 +167,15 @@ class Requirements(object):
                     'python -m pip install {} --upgrade pip'.format(
                         proxy.parameter)
                     )
-        commands.append(u'pip install {} -r "{}"'.format(
+        commands.append(u'python -m pip install {} -r "{}"'.format(
             proxy.parameter, self.requirements_file))
-        commands.append('pip freeze > python_libraries_installed.txt')
+        commands.append('python -m pip freeze > python_libraries_installed.txt')
         return commands
 
     def uninstall_commands(self):
         commands = []
         commands.append(
-            u'pip uninstall -r "{}" -y'.format(self.requirements_file))
+            u'python -m pip uninstall -r "{}" -y'.format(self.requirements_file))
         return commands
 
 

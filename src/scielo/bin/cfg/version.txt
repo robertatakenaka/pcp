@@ -1,3 +1,22 @@
+4.0.096 15/12/2023
+==================
+- Markup
+  - (enhancement) Após atualização de Word, as referências cruzadas passaram a serem identificadas por [uri] no lugar de [xref]
+  - (enhancement) Adiciona nova alternativa de chamada de python a partir da macro markup
+  - (enhancement) Escreve mais detalhes em arquivos de log. Python não executa por bloqueio de antivírus ou similares, por aumento de segurança do Windows 11
+   
+- Installation
+  - (enhancement) Indica em requirements.txt as versões de packtools e pillow
+  - (enhancement) Atualiza install_requirements.bat para usar requirements.txt
+  - (enhancement) Troca as chamadas de pip para python -m pip para não precisar adicionar pip.exe como exceção no antivírus ou similar para não ser bloqueado; será necessário adicionar apenas python.exe
+  - (enhancement) Apresenta mensgem de erro mais detalhada quando não conseguir importar pillow ou packtools
+
+- XPM/XC
+  - (enhancement) Apresenta mensgem de erro mais detalhada quando não conseguir ler arquivo XML
+
+- XC
+  - (enhancement) Adiciona correções/melhorias feitas no XC 2019 desde 4.0.096 22/04/2019
+
 4.0.096 22/04/2019
 ==================
 - XPM
