@@ -3133,10 +3133,20 @@ remarked item: Execute Program
   Command Line=%PROGDIR%\xml\run_app.py install
   Flags=00000011
 end
-remarked item: Execute Program
-  Command Line=%PROGDIR%\xml\install_requirements.bat
+item: Check if File/Dir Exists
+  Pathname=%PROGDIR%\logs
+  Flags=00000101
+end
+item: Create Directory
+  Pathname=%PROGDIR%\logs
+end
+item: End Block
+end
+item: Execute Program
+  Pathname=%PROGDIR%\xml\install_requirements.bat
+  Command Line=%PROGDIR%\xml %PROGDIR%\logs\pip_freeze_backup.log
   Default Directory=%PROGDIR%\xml
-  Flags=00000011
+  Flags=00000100
 end
 remarked item: Add to AUTOEXEC.BAT
   New Text=SET BAP=OS23470a
