@@ -98,6 +98,7 @@ INDEXABLE = [
     'obituary',
     'reply',
     'data-article',
+    'reviewer-report',
 ]
 
 INDEXABLE_EXCEPTIONS = {
@@ -109,6 +110,7 @@ INDEXABLE_BUT_EXCEPTION = [
     'correction',
     'retraction',
     'partial-retraction',
+    'reviewer-report',
 ]
 
 
