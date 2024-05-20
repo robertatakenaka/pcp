@@ -6,5 +6,15 @@
 	<xsl:include href="../../../v3.0/xsl/sgml2xml/xml2pmc.xsl"/>
 	<xsl:template match="article/@specific-use"/>
 	<xsl:template match="@dtd-version"></xsl:template>
-	
+		
+	<xsl:template match="funding-group">
+		<!--
+			Issues conflitantes
+			https://github.com/scieloorg/PC-Programs/issues/1902 (remover funding-group)
+			https://github.com/scieloorg/pcp/issues/10 (manter funding-group)
+			Provavelmente PMC passou a adotar uma versão mais recente de Schema
+		-->
+		<xsl:copy-of select="."/>
+	</xsl:template>
+
 </xsl:stylesheet>
