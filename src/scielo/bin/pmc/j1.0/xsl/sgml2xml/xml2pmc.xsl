@@ -4,7 +4,7 @@
 	xmlns:mml="http://www.w3.org/1998/Math/MathML" exclude-result-prefixes="util xsl xlink mml">
 
 	<xsl:param name="new_name"/>
-	<xsl:variable name="translations" select=".//sub-article[@article-type='translation']"/>
+	
 	<xsl:variable name="display_funding">
 		<xsl:choose>
 			<!--
@@ -50,19 +50,6 @@
 		</xsl:attribute>
 	</xsl:template>
 	<xsl:template match="@dtd-version"></xsl:template>
-	<xsl:template match="sub-article[@article-type='translation']">
-	</xsl:template>
-	
-	<!-- KWD-GROUP - begin -->
-	<xsl:template match="article//article-meta/kwd-group">
-	</xsl:template>
-	
-	<xsl:template match="article//article-meta/kwd-group[1]">
-		<xsl:apply-templates select="..//kwd-group[@xml:lang='en']" mode="copy"/>
-		<xsl:apply-templates select="$translations[@xml:lang='en']" mode="kwd-group"/>
-		<xsl:apply-templates select="..//kwd-group[@xml:lang!='en']" mode="copy"/>
-		<xsl:apply-templates select="$translations[@xml:lang!='en']" mode="kwd-group"/>
-	</xsl:template>
 	
 	<xsl:template match="@*" mode="copy">
 		<xsl:attribute name="{name()}"><xsl:value-of select="."/></xsl:attribute>
@@ -73,128 +60,7 @@
 			<xsl:apply-templates select="@*|*|text()" mode="copy"></xsl:apply-templates>
 		</xsl:element>
 	</xsl:template>
-	
-	<xsl:template match="sub-article[@article-type='translation']" mode="kwd-group">
-		<kwd-group>
-			<xsl:attribute name="xml:lang"><xsl:value-of select="@xml:lang"/></xsl:attribute>
-			<xsl:apply-templates select=".//kwd-group//*"/>
-		</kwd-group>
-	</xsl:template>
-	
-	<!-- KWD-GROUP - end -->
-	
-	<!-- TITLE-GROUP - begin -->
-	<xsl:template match="article[@xml:lang='en']//article-meta/title-group">
-		<title-group>
-			<xsl:apply-templates select="@*|*|text()"/>
-			<xsl:apply-templates select="$translations[@xml:lang!='en']" mode="trans-title-group"/>
-		</title-group>
-	</xsl:template>
-	
-	<xsl:template match="article[@xml:lang!='en']//article-meta/title-group">
-		<title-group>
-			<xsl:apply-templates select="trans-title-group[@xml:lang='en']" mode="article-title"/>
-			<xsl:apply-templates select="$translations[@xml:lang='en']//article-title"/>
-			<trans-title-group>
-				<xsl:attribute name="xml:lang"><xsl:value-of select="../../../@xml:lang"/></xsl:attribute>
-				<xsl:apply-templates select="article-title" mode="trans-title"/>
-			</trans-title-group>
-			<xsl:apply-templates select="trans-title-group[@xml:lang!='en']"/>
-			<xsl:apply-templates select="$translations[@xml:lang!='en']" mode="trans-title-group"/>
-		</title-group>
-	</xsl:template>
-	
-	<xsl:template match="sub-article[@article-type='translation' and @xml:lang!='en']" mode="trans-title-group">
-		<trans-title-group>
-			<xsl:attribute name="xml:lang"><xsl:value-of select="@xml:lang"/></xsl:attribute>
-			<xsl:apply-templates select=".//article-title" mode="trans-title"/>
-		</trans-title-group>
-	</xsl:template>
-	
-	<xsl:template match="trans-title-group" mode="article-title">
-		<article-title>
-			<xsl:apply-templates select="*|text()" mode="article-title"/>
-		</article-title>
-	</xsl:template>
-	
-	<xsl:template match="trans-title" mode="article-title">
-		<xsl:apply-templates select="*|text()"/>
-	</xsl:template>
-	
-	<xsl:template match="article-title"  mode="trans-title">
-		<trans-title>
-			<xsl:apply-templates select="*|text()"/>
-		</trans-title>
-	</xsl:template>
-	<!-- TITLE-GROUP - END -->
-	
-	<!-- ABSTRACT - begin -->
-	<xsl:template match="article[@xml:lang='en']//abstract">
-		<xsl:apply-templates select="." mode="abstract"/>
-		<xsl:apply-templates select="$translations[@xml:lang!='en']" mode="trans-abstract"/>
-	</xsl:template>
-	
-	<xsl:template match="article[@xml:lang='en']//abstract | trans-abstract" mode="abstract">
-		<abstract>
-			<xsl:apply-templates select="*|text()"/>
-		</abstract>
-	</xsl:template>
-	
-	<xsl:template match="sub-article[@article-type='translation' and @xml:lang!='en']" mode="trans-abstract">
-		<trans-abstract>
-			<xsl:attribute name="xml:lang"><xsl:value-of select="@xml:lang"/></xsl:attribute>
-			<xsl:apply-templates select=".//front-stub/abstract" mode="trans-abstract"/>
-		</trans-abstract>
-	</xsl:template>
-	
-	<xsl:template match="abstract" mode="trans-abstract">
-		<xsl:apply-templates select="*|text()"/>
-	</xsl:template>
-	
-	<xsl:template match="article[@xml:lang!='en']/@xml:lang">
-		<xsl:attribute name="{name()}">en</xsl:attribute>
-	</xsl:template>
-	
-	<xsl:template match="article[@xml:lang!='en']//article-meta//abstract">
-		<xsl:apply-templates select="..//trans-abstract[@xml:lang='en']" mode="abstract"/>
-		<xsl:apply-templates select="$translations[@xml:lang='en']//abstract"/>
-		<trans-abstract>
-			<xsl:attribute name="xml:lang"><xsl:value-of select="../../../@xml:lang"/></xsl:attribute>
-			<xsl:apply-templates select="*|text()"/>
-		</trans-abstract>
-		<xsl:apply-templates select="$translations[@xml:lang!='en']" mode="trans-abstract"/>
-	</xsl:template>
-	
-	<xsl:template match="article[@xml:lang!='en']//article-meta//trans-abstract[@xml:lang='en']">
-	</xsl:template>
-	<!-- ABSTRACT - END -->
-	
-	<!-- BODY - begin -->
-	<xsl:template match="article[@xml:lang!='en']/body">
-		<xsl:apply-templates select="$translations[@xml:lang='en']/body"/>
-	</xsl:template>
-	<xsl:template match="article[@xml:lang!='en']/back">
-		<back>
-		<xsl:apply-templates select="$translations[@xml:lang='en']/back/ack"/>
-		<xsl:apply-templates select="ref-list"/>
-		<xsl:apply-templates select="$translations[@xml:lang='en']/back/*[name()!='ack']"/>
-		</back>
-	</xsl:template>
-	<!-- BODY - end -->
-	
-	<xsl:template match="sub-article[@article-type='translation' and @xml:lang!='en']//article-title/xref"></xsl:template>
-	<xsl:template match="sub-article[@article-type='translation']//front-stub//@xml:lang|sub-article[@article-type='translation']//front//@xml:lang"></xsl:template>
-	<xsl:template match="mixed-citation">
-		<xsl:choose>
-			<xsl:when test="$xml_type='scielo'"/>
-			<xsl:otherwise>
-				<xsl:element name="{name()}">
-					<xsl:apply-templates/>
-				</xsl:element>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-	
+				
 	<xsl:template match="aff/institution[@content-type='original']/text()">
 		<xsl:value-of select="."/>
 	</xsl:template>
@@ -315,15 +181,6 @@
 		<xsl:apply-templates select="." mode="copy"></xsl:apply-templates>
 	</xsl:template>
 
-	<xsl:template match="funding-group">
-		<xsl:if test="$display_funding='yes'">
-			<xsl:element name="{name()}">
-				<xsl:apply-templates select="@* | * | text()"/>
-			</xsl:element>
-		</xsl:if>
-	</xsl:template>
-
-
 	<xsl:template match="graphic/@href">
 		<xsl:attribute name="{name()}">
 			<xsl:choose>
@@ -367,9 +224,9 @@
 		<contrib-id>
 			<xsl:attribute name="contrib-id-type"><xsl:value-of select="@contrib-id-type"/></xsl:attribute>
 		<xsl:choose>
-			<xsl:when test="@contrib-id-type='lattes' and not(contains(.,'http://lattes.cnpq.br/'))">http://lattes.cnpq.br/</xsl:when>
-			<xsl:when test="@contrib-id-type='orcid' and not(contains(.,'http://orcid.org/'))">http://orcid.org/</xsl:when>
-			<xsl:when test="@contrib-id-type='researchid'and not(contains(.,'http://www.researcherid.com/rid/'))">http://www.researcherid.com/rid/</xsl:when>
+			<xsl:when test="@contrib-id-type='lattes' and not(contains(.,'//lattes.cnpq.br/'))">https://lattes.cnpq.br/</xsl:when>
+			<xsl:when test="@contrib-id-type='orcid' and not(contains(.,'//orcid.org/'))">https://orcid.org/</xsl:when>
+			<xsl:when test="@contrib-id-type='researchid'and not(contains(.,'//www.researcherid.com/rid/'))">https://www.researcherid.com/rid/</xsl:when>
 			<xsl:when test="@contrib-id-type='scopus'and not(contains(.,'https://www.scopus.com/authid/detail.uri?authorId='))">https://www.scopus.com/authid/detail.uri?authorId=</xsl:when>
 		</xsl:choose><xsl:value-of select="."/>
 		</contrib-id>
@@ -394,7 +251,6 @@
 		</uri>
 	</xsl:template>
 	
-	<xsl:template match="funding-group"></xsl:template>
 	<xsl:template match="product">
 		<product>
 			<xsl:apply-templates select="@*|*"></xsl:apply-templates>
