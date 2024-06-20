@@ -59,6 +59,17 @@
 			<xsl:apply-templates select="@*|*|text()" mode="copy"></xsl:apply-templates>
 		</xsl:element>
 	</xsl:template>
+
+	<xsl:template match="mixed-citation">
+		<xsl:choose>
+			<xsl:when test="$xml_type='scielo'"/>
+			<xsl:otherwise>
+				<xsl:element name="{name()}">
+					<xsl:apply-templates/>
+				</xsl:element>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 				
 	<xsl:template match="aff/institution[@content-type='original']/text()">
 		<xsl:value-of select="."/>
