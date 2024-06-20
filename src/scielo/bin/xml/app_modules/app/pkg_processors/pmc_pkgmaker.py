@@ -76,7 +76,7 @@ class PMCPackageItemMaker(object):
             self.insert_math_id()
             self.replace_img_ext_to_tiff()
             self.add_files_to_pmc_package()
-            self.rename_en_files()
+            # self.rename_en_files()
             return True
 
     def make_xml(self, scielo_dtd_files, pmc_dtd_files):
@@ -127,12 +127,18 @@ class PMCPackageItemMaker(object):
 
     def add_files_to_pmc_package(self):
         doc = self.pmc_pkgfiles.article_xml
-        if doc.language == 'en':
-            self.scielo_pkgfiles.copy_related_files(self.pmc_pkgfiles.path)
-            self.pmc_pkgfiles.svg2tiff()
-            valid_files = self.pmc_pkgfiles.select_pmc_files()
-            delete_files = [f for f in self.pmc_pkgfiles.related_files if f not in valid_files]
-            self.pmc_pkgfiles.delete_files(delete_files)
+        # if doc.language == 'en':
+        #     self.scielo_pkgfiles.copy_related_files(self.pmc_pkgfiles.path)
+        #     self.pmc_pkgfiles.svg2tiff()
+        #     valid_files = self.pmc_pkgfiles.select_pmc_files()
+        #     delete_files = [f for f in self.pmc_pkgfiles.related_files if f not in valid_files]
+        #     self.pmc_pkgfiles.delete_files(delete_files)
+
+        self.scielo_pkgfiles.copy_related_files(self.pmc_pkgfiles.path)
+        self.pmc_pkgfiles.svg2tiff()
+        # valid_files = self.pmc_pkgfiles.select_pmc_files()
+        # delete_files = [f for f in self.pmc_pkgfiles.related_files if f not in valid_files]
+        # self.pmc_pkgfiles.delete_files(delete_files)
 
     def rename_en_files(self):
         en_files = [f for f in self.pmc_pkgfiles.related_files if '-en.' in f]
